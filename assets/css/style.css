@@ -300,18 +300,6 @@ section {
 .home .home-icons a:hover::before {
   width: 100%;
 }
-.home .home-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 100%;
-  background-color: transparent;
-  /*border: 2px solid red;*/
-  background: #0A1F33;
-  /*opacity: 0.45;*/
-  opacity: 0.2;
-}
 
 /* About design */
 .about {
