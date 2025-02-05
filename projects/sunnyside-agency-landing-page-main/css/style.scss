@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+$Dark-blue: hsl(198, 62%, 26%);
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+body{
+  p, span{
+    font-size: 18px;
+  }
+}
+.barlow-semibold {
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fraunces-bold {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+.fraunces-extra-bold {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+.contact-btn {
+  font-size: 0.8rem;
+  color: $Very-dark-desaturated-blue;
+  background-color: $White;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $Dark-blue;
+    color: $White;
+  }
+}
+
+
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 5rem;
+    letter-spacing: 0.3rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $White;
+  }
+
+  img {
+    width: 3rem;
+    margin-bottom: 10rem;
+  }
+}
+  
+
+.transform-container,
+.audience-container {
+  min-height: 70vh;
+  p {
+    color: $Dark-grayish-blue;
+  }
+  a {
+    letter-spacing: 0.5px;
+    color: $Very-dark-desaturated-blue;
+  }
+}
+
+.learn-more1, .learn-more2 {
+  color: hsl(212, 27%, 19%);
+  cursor: pointer;
+
+  &::before {
+    content: ""; 
+    position: absolute;
+    bottom: 0; 
+    margin-bottom: 0.1rem;
+    width: 100%; 
+    height: 7px; // Thickness of the highlight
+    background-color: $Yellow; 
+    z-index: -1; // Place it behind the text
+    transform: scaleX(1);
+  }
+}
+.learn-more2 {
+  &::before{
+    background-color: $Soft-red;
+  }
+}
+.graphic-container {
+  min-height: 70vh;
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-position: center; /* also top will do */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  p {
+    color: $Dark-desaturated-cyan;
+  }
+}
+.photography-container {
+  min-height: 70vh;
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-position: top;
+  p {
+    color: $Dark-blue;
+  }
+}
+.client-section {
+  min-height: 100vh;
+  .description {
+    color: $Very-dark-grayish-blue;
+  }
+  .client-text{
+    letter-spacing: 0.3rem;
+    word-spacing: 0.35rem;
+    color: $Grayish-blue;
+  }
+  .detail {
+    p {
+      color: $Grayish-blue;
+    }
+  }
+}
+.footer-container{
+  background-color: #90D5C6;
+  .infos{
+    span{
+      color: $Dark-moderate-cyan;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        color: $White;
+      }
+    }
+  }
+  .contact-icons{
+    ul{
+      li{
+        color: $Dark-desaturated-cyan;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover{
+          color: $White;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 992px){
+  .menu-wrapper{
+  }
+  .mobile-menu {
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+    /*clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);*/
+    clip-path: polygon(0% 0%, 100% 0%, 100.1% 100.3%, 32.7% 100.3%, 10% 100%, 0% 100.3%, 0% 75%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    .nav-link {
+      color: $Grayish-blue !important;
+      font-size: 1.2rem;
+      display: block;
+    }
+  
+    /* Hide Navbar Toggle Icon's Default Background */
+    .navbar-toggler {
+      border: none;
+    }
+  
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .contact-btn{
+      background-color: $Yellow;
+      font-size: 1rem;
+    }
+  }
+
+  
+  .hero-section {
+    background-image: url("../images/mobile/image-header.jpg");
+  
+    h1 {
+      font-size: 2.7rem;
+    }
+  
+    img {
+      width: 3rem;
+      margin-bottom: 5rem;
+    }
+  }
+    
+  .transform-container{
+    .content-box{
+      order: 2;
+      min-width: 100%;
+      position: relative;
+      .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 80%;
+        padding: 3.5rem 0;
+        h2{
+          min-width: 100%;
+          text-align: center;
+        }
+        p{
+          text-align: center;
+          padding-bottom: 0.5rem;
+        }
+      }
+      
+    }
+    .img-box{
+      order: 1;
+    }
+  }
+  .audience-container{
+    .content-box{
+      min-width: 100%;
+      position: relative;
+      .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 80%;
+        padding: 3.5rem 0;
+        h2{
+          min-width: 100%;
+          text-align: center;
+        }
+        p{
+          text-align: center;
+          padding-bottom: 0.5rem;
+        }
+      }
+      
+    }
+    .img-box{
+      order: 1;
+    }
+  }
+  .graphic-container {
+    min-height: 89vh;
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    background-size: contain; 
+    .content-box{
+      min-width: 70vh;
+      padding: 0 0.3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .photography-container {
+    min-height: 89vh;
+    background-image: url("../images/mobile/image-photography.jpg");
+    background-size: contain;
+    .content-box{
+      min-width: 70vh;
+      padding: 0 0.3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .client-section {
+    min-height: 100vh;
+    padding-top: 3.5rem;
+    
+    .client-text{
+      font-size: 1rem;
+    }
+    
+  }
+}

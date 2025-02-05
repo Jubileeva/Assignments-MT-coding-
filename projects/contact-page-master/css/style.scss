@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.be-vietnam-pro-regular {
+  font-family: "Be Vietnam Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.be-vietnam-pro-semibold {
+  font-family: "Be Vietnam Pro", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+$Purple: #4036A9;
+$Black: #111729;
+$Grey: #CDD5E0;
+$Pure-White: #FFFFFF;
+$White: #FFFFFF33;
+$Dark-Pink: #B4436D;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container{
+  padding: 0;
+  margin: 0;
+  background-image: url('../resources/background@3x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  color: $Pure-White;
+  header{
+    img{
+      max-width: 25%;
+      display: block;
+    }
+  }
+
+  main{
+    .content{
+      text-align: center;
+      margin: 2.5rem 0 3.5rem;
+      h2{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      p{
+        font-size: 1rem;
+        word-spacing: 0.1rem;
+        margin: 1rem 0 0;
+      }
+    }
+
+    .contact{
+      background-color: rgba($color: $Grey, $alpha: 0.3);
+      padding: 1.2rem 0.8rem;
+      border-radius: 0.8rem;
+      form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        label{
+          font-size: 0.875rem;
+          color: $Pure-White;
+          font-weight: 300;
+        }
+
+        .name, .email, .company-size, .subject, .message{
+          input{
+            width: 100%;
+            padding: 1.3rem 1rem;
+            border-radius: 0.8rem;
+            border: none;
+            transform: translate(0, 0.3rem);
+
+            &::placeholder{
+              color: $Black;
+            }
+          }
+
+          select{
+            width: 100%;
+            padding: 1.3rem 1rem;
+            border-radius: 0.8rem;
+            border: none;
+            transform: translate(0, 0.3rem);
+            appearance: none;
+            /*background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23333" d="M2 0L0 2h4z"/%3E%3C/svg%3E'); /* Custom dropdown arrow 
+            background-repeat: no-repeat;*/
+          }
+
+          textarea{
+            width: 100%;
+            padding: 1.3rem 1rem;
+            border-radius: 0.8rem;
+            border: none;
+            transform: translate(0, 0.3rem);
+
+            &::placeholder-shown {
+              color: red;
+            }
+          }
+        }
+        button{
+          width: 100%;
+          padding: 1.3rem 1rem;
+          border-radius: 0.8rem;
+          border: none;
+          transform: translate(0, 0.3rem);
+          font-size: 1.25rem;
+          color: $Purple;
+          font-weight: 700;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover{
+            color: $Pure-White;
+            background-color: $Purple;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  body{
+    max-width: 100%;
+  }
+  .container{
+    width: 100%;
+
+    header{
+      margin-left: 4rem;
+    }
+  
+    main{
+      .content{
+        max-width: 40%;
+        margin: 2rem auto 0;
+        h2{
+          font-size: 3.2rem;
+        }
+  
+        p{
+          font-size: 1.5rem;
+          line-height: 2.3rem;
+          letter-spacing: 0.05rem;
+        }
+      }
+  
+      .contact{
+        max-width: 60%;
+        margin: 4rem auto 0;
+        padding: 2rem;
+        form{         
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 0.7fr;
+          .name{
+          /* grid-area: name-input; */
+          grid-column: 1 / 2;
+          }                
+  
+          .email{
+            /* grid-area: email; */
+            grid-column: 2 / 3;
+          }
+  
+          .company-size{
+            /* grid-area: company-size; */
+            margin-top: -0.5rem;
+          }
+  
+          .subject{
+            /* grid-area: subject; */
+            margin-top: -0.5rem;
+          }
+  
+          .message{
+            /* grid-area: message; */
+            grid-column: 1 / 3;
+            margin-top: -0.8rem;
+          }
+  
+          button{
+            /* grid-area: button; */
+            grid-column: 1 / 3;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: -0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1350px){
+  body{
+    max-width: 100%;
+  }
+  .container{
+    width: 100%;
+
+    header{
+      margin-left: 3.5rem;
+    }
+  
+    main{
+      .content{
+        max-width: 60%;
+        margin: 2rem auto 0;
+        h2{
+          font-size: 3.2rem;
+        }
+  
+        p{
+          font-size: 1.5rem;
+          line-height: 2.3rem;
+          letter-spacing: 0.05rem;
+        }
+      }
+      .contact{
+        max-width: 80%;
+        margin: 4rem auto 0;
+        padding: 2rem;
+        form{         
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 0.7fr;
+          .name{
+          /* grid-area: name-input; */
+          grid-column: 1 / 2;
+          }                
+  
+          .email{
+            /* grid-area: email; */
+            grid-column: 2 / 3;
+          }
+  
+          .company-size{
+            /* grid-area: company-size; */
+            margin-top: -0.5rem;
+          }
+  
+          .subject{
+            /* grid-area: subject; */
+            margin-top: -0.5rem;
+          }
+  
+          .message{
+            /* grid-area: message; */
+            grid-column: 1 / 3;
+            margin-top: -0.8rem;
+          }
+  
+          button{
+            /* grid-area: button; */
+            grid-column: 1 / 3;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: -0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px){
+  html{
+    font-size: 85%;
+  }
+}
+@media (max-width: 992px){
+  html{
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px){
+  html{
+    font-size: 65%;
+  }
+}
+
+
+ 

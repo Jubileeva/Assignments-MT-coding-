@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body p, body span {
+  font-size: 18px;
+}
+
+.barlow-semibold {
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fraunces-bold {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+.fraunces-extra-bold {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+.contact-btn {
+  font-size: 0.8rem;
+  color: hsl(212, 27%, 19%);
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact-btn:hover {
+  background-color: hsl(198, 62%, 26%);
+  color: hsl(0, 0%, 100%);
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-section h1 {
+  margin-bottom: 5rem;
+  letter-spacing: 0.3rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+.hero-section img {
+  width: 3rem;
+  margin-bottom: 10rem;
+}
+
+.transform-container,
+.audience-container {
+  min-height: 70vh;
+}
+.transform-container p,
+.audience-container p {
+  color: hsl(232, 10%, 55%);
+}
+.transform-container a,
+.audience-container a {
+  letter-spacing: 0.5px;
+  color: hsl(212, 27%, 19%);
+}
+
+.learn-more1, .learn-more2 {
+  color: hsl(212, 27%, 19%);
+  cursor: pointer;
+}
+.learn-more1::before, .learn-more2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.1rem;
+  width: 100%;
+  height: 7px;
+  background-color: hsl(51, 100%, 49%);
+  z-index: -1;
+  transform: scaleX(1);
+}
+
+.learn-more2::before {
+  background-color: hsl(7, 99%, 70%);
+}
+
+.graphic-container {
+  min-height: 70vh;
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-position: center; /* also top will do */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.graphic-container p {
+  color: hsl(167, 40%, 24%);
+}
+
+.photography-container {
+  min-height: 70vh;
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-position: top;
+}
+.photography-container p {
+  color: hsl(198, 62%, 26%);
+}
+
+.client-section {
+  min-height: 100vh;
+}
+.client-section .description {
+  color: hsl(213, 9%, 39%);
+}
+.client-section .client-text {
+  letter-spacing: 0.3rem;
+  word-spacing: 0.35rem;
+  color: hsl(210, 4%, 67%);
+}
+.client-section .detail p {
+  color: hsl(210, 4%, 67%);
+}
+
+.footer-container {
+  background-color: #90D5C6;
+}
+.footer-container .infos span {
+  color: hsl(168, 34%, 41%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer-container .infos span:hover {
+  color: hsl(0, 0%, 100%);
+}
+.footer-container .contact-icons ul li {
+  color: hsl(167, 40%, 24%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer-container .contact-icons ul li:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 992px) {
+  .mobile-menu {
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+    /*clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%);*/
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100.1% 100.3%, 32.7% 100.3%, 10% 100%, 0% 100.3%, 0% 75%);
+            clip-path: polygon(0% 0%, 100% 0%, 100.1% 100.3%, 32.7% 100.3%, 10% 100%, 0% 100.3%, 0% 75%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Hide Navbar Toggle Icon's Default Background */
+  }
+  .mobile-menu .nav-link {
+    color: hsl(210, 4%, 67%) !important;
+    font-size: 1.2rem;
+    display: block;
+  }
+  .mobile-menu .navbar-toggler {
+    border: none;
+  }
+  .mobile-menu .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .mobile-menu .contact-btn {
+    background-color: hsl(51, 100%, 49%);
+    font-size: 1rem;
+  }
+  .hero-section {
+    background-image: url("../images/mobile/image-header.jpg");
+  }
+  .hero-section h1 {
+    font-size: 2.7rem;
+  }
+  .hero-section img {
+    width: 3rem;
+    margin-bottom: 5rem;
+  }
+  .transform-container .content-box {
+    order: 2;
+    min-width: 100%;
+    position: relative;
+  }
+  .transform-container .content-box .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    padding: 3.5rem 0;
+  }
+  .transform-container .content-box .content-wrapper h2 {
+    min-width: 100%;
+    text-align: center;
+  }
+  .transform-container .content-box .content-wrapper p {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .transform-container .img-box {
+    order: 1;
+  }
+  .audience-container .content-box {
+    min-width: 100%;
+    position: relative;
+  }
+  .audience-container .content-box .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    padding: 3.5rem 0;
+  }
+  .audience-container .content-box .content-wrapper h2 {
+    min-width: 100%;
+    text-align: center;
+  }
+  .audience-container .content-box .content-wrapper p {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .audience-container .img-box {
+    order: 1;
+  }
+  .graphic-container {
+    min-height: 89vh;
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    background-size: contain;
+  }
+  .graphic-container .content-box {
+    min-width: 70vh;
+    padding: 0 0.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .photography-container {
+    min-height: 89vh;
+    background-image: url("../images/mobile/image-photography.jpg");
+    background-size: contain;
+  }
+  .photography-container .content-box {
+    min-width: 70vh;
+    padding: 0 0.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .client-section {
+    min-height: 100vh;
+    padding-top: 3.5rem;
+  }
+  .client-section .client-text {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
