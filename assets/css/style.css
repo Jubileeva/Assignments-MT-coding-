@@ -300,7 +300,7 @@ section {
 .home .home-icons a:hover::before {
   width: 100%;
 }
-.home .home-imgHover {
+.home .home-img {
   position: absolute;
   top: 0;
   right: 0;
