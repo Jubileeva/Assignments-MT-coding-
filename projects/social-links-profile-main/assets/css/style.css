@@ -1,0 +1,109 @@
+/* Define custom fonts */
+@font-face {
+  font-family: Inter-Regular;
+  src: url(../fonts/static/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url(../fonts/static/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url(../fonts/static/Inter-Bold.ttf);
+}
+/* Define root variables for color */
+:root {
+  --Primary-color: hsl(75, 94%, 57%);
+  --Neutral-White: hsl(0, 0%, 100%);
+  --Neutral-Grey: hsl(0, 0%, 20%);
+  --Neutral-darkGrey: hsl(0, 0%, 12%);
+  --Neutral-offBlack: hsl(0, 0%, 8%);
+}
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Styling for the body element */
+body {
+  max-width: 100%;
+  background-color: var(--Neutral-offBlack);
+  color: var(--Neutral-White);
+  text-align: center;
+}
+
+/* Styling for the main content area */
+main {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px;
+  color: var(--Neutral-White);
+}
+/* Styling for the main section within main */
+main .main-content {
+  background-color: var(--Neutral-darkGrey);
+  padding: 28px 32px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+/* Styling for the intro section */
+.intro-section {
+  line-height: 2rem;
+}
+
+/* Styling for the avatar within the intro section */
+
+.intro-section .avatar {
+  height: 94px;
+  width: 94px;
+  border-radius: 50%;
+  border: 2px solid var(--Primary-color);
+}
+/* Styling for the h1 element within the intro section */
+.intro-section h3 {
+  font-family: Inter-Bold;
+}
+/* Styling for the location within the intro section */
+.intro-section .location {
+  color: var(--Primary-color);
+  font-family: Inter-SemiBold;
+}
+/* Styling for the profession within the intro section */
+.intro-section .profession {
+  font-family: Inter-Regular;
+  margin: 8px 0 0;
+}
+/* Styling for the social media section */
+.social-media-section {
+  margin-top: 18px;
+}
+/* Styling for links within the social media section */
+.social-media-section a {
+  display: block;
+  background-color: var(--Neutral-Grey);
+  margin: 18px 0;
+  padding: 12px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--Neutral-White);
+  background-color: var(--Neutral-Grey);
+  font-family: Inter-SemiBold;
+}
+/* Styling for active and hover states of links within the social media section */
+.social-media-section a:active,
+.social-media-section a:hover {
+  background-color: var(--Primary-color);
+  color: var(--Neutral-offBlack);
+  cursor: pointer;
+  transition: 0.6s;
+}
+/* The Mobile designs style */
+@media (max-width: 425px) {
+  main {
+    max-width: 375px;
+  }
+}
